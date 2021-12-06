@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h2>This is a View page from Employee Controller </h2>
+
+<h3>This is modified Employee controller view</h3>
+<h1>message : @ViewData["msg"]</h1>
+<h2>Message: @ViewBag.Msg   </h2>
+<ol>
+    @foreach (var cus in @ViewBag.cust)
+   {
+       <li>@cus</li>
+   }
+</ol>
+<table class = "table">
+    <tr>
+        <th>Id</th><th>Name</th><th>Email</th>
+    </tr>
+    @foreach (var em in Model)
+    {
+       
+        <td>@em.Id</td>
+         <td>@em.Name</td>
+          <td>@em.Email</td>
+          
+    }
+    
+       
+   
+</table>
